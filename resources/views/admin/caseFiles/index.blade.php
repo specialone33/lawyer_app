@@ -37,9 +37,6 @@
                                         {{ trans('cruds.caseFile.fields.case_type') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.caseFile.fields.case_description') }}
-                                    </th>
-                                    <th>
                                         {{ trans('cruds.caseFile.fields.user') }}
                                     </th>
                                     <th>
@@ -52,18 +49,6 @@
                                         {{ trans('cruds.caseFile.fields.court') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.caseFile.fields.procedural_process') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.hearing') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.case_status') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.next_actions') }}
-                                    </th>
-                                    <th>
                                         {{ trans('cruds.caseFile.fields.customers') }}
                                     </th>
                                     <th>
@@ -74,36 +59,6 @@
                                     </th>
                                     <th>
                                         {{ trans('cruds.lawyer.fields.name') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.comments') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.petition_filing_number') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.decision_number') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.charging_expenses') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.hours') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.hourly_rate') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.one_time_fees') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.oneTimeFee.fields.value') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.custom_one_time_fee_name') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.caseFile.fields.custom_one_time_fee_value') }}
                                     </th>
                                     <th>
                                         &nbsp;
@@ -129,9 +84,6 @@
                                             {{ $caseFile->case_type->name ?? '' }}
                                         </td>
                                         <td>
-                                            {{ $caseFile->case_description ?? '' }}
-                                        </td>
-                                        <td>
                                             {{ $caseFile->user->surname ?? '' }}
                                         </td>
                                         <td>
@@ -142,18 +94,6 @@
                                         </td>
                                         <td>
                                             {{ $caseFile->court->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->procedural_process->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->hearing ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->case_status->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->next_actions ?? '' }}
                                         </td>
                                         <td>
                                             @foreach($caseFile->customers as $key => $item)
@@ -168,36 +108,6 @@
                                         </td>
                                         <td>
                                             {{ $caseFile->lawyer->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->comments ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->petition_filing_number ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->decision_number ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->charging_expenses ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->hours ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->hourly_rate ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->one_time_fees->name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->one_time_fees->value ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->custom_one_time_fee_name ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $caseFile->custom_one_time_fee_value ?? '' }}
                                         </td>
                                         <td>
                                             @can('case_file_show')
