@@ -57,9 +57,6 @@ class CompanyContractController extends Controller
                 return $row->company_type ? $row->company_type->name : '';
             });
 
-            $table->editColumn('contract_description', function ($row) {
-                return $row->contract_description ? $row->contract_description : '';
-            });
             $table->addColumn('user_surname', function ($row) {
                 return $row->user ? $row->user->surname : '';
             });
@@ -89,41 +86,8 @@ class CompanyContractController extends Controller
             $table->editColumn('lawyer.name', function ($row) {
                 return $row->lawyer ? (is_string($row->lawyer) ? $row->lawyer : $row->lawyer->name) : '';
             });
-            $table->editColumn('comments', function ($row) {
-                return $row->comments ? $row->comments : '';
-            });
-            $table->editColumn('charging_expenses', function ($row) {
-                return $row->charging_expenses ? $row->charging_expenses : '';
-            });
-            $table->editColumn('hours', function ($row) {
-                return $row->hours ? $row->hours : '';
-            });
-            $table->editColumn('hourly_rate', function ($row) {
-                return $row->hourly_rate ? $row->hourly_rate : '';
-            });
-            $table->addColumn('one_time_fees_name', function ($row) {
-                return $row->one_time_fees ? $row->one_time_fees->name : '';
-            });
 
-            $table->editColumn('one_time_fees.value', function ($row) {
-                return $row->one_time_fees ? (is_string($row->one_time_fees) ? $row->one_time_fees : $row->one_time_fees->value) : '';
-            });
-            $table->editColumn('custom_one_time_fee_name', function ($row) {
-                return $row->custom_one_time_fee_name ? $row->custom_one_time_fee_name : '';
-            });
-            $table->editColumn('custom_one_time_fee_value', function ($row) {
-                return $row->custom_one_time_fee_value ? $row->custom_one_time_fee_value : '';
-            });
-            $table->editColumn('alterations', function ($row) {
-                $labels = [];
-                foreach ($row->alterations as $alteration) {
-                    $labels[] = sprintf('<span class="label label-info label-many">%s</span>', $alteration->name);
-                }
-
-                return implode(' ', $labels);
-            });
-
-            $table->rawColumns(['actions', 'placeholder', 'company_type', 'user', 'customers', 'lawyer', 'one_time_fees', 'alterations']);
+            $table->rawColumns(['actions', 'placeholder', 'company_type', 'user', 'customers', 'lawyer']);
 
             return $table->make(true);
         }

@@ -36,9 +36,6 @@
                                     {{ trans('cruds.otherCase.fields.case_type') }}
                                 </th>
                                 <th>
-                                    {{ trans('cruds.otherCase.fields.case_description') }}
-                                </th>
-                                <th>
                                     {{ trans('cruds.otherCase.fields.user') }}
                                 </th>
                                 <th>
@@ -58,30 +55,6 @@
                                 </th>
                                 <th>
                                     {{ trans('cruds.lawyer.fields.name') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.comments') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.charging_expenses') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.hours') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.hourly_rate') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.one_time_fees') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.oneTimeFee.fields.value') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.custom_one_time_fee_name') }}
-                                </th>
-                                <th>
-                                    {{ trans('cruds.otherCase.fields.custom_one_time_fee_value') }}
                                 </th>
                                 <th>
                                     &nbsp;
@@ -146,7 +119,6 @@
 { data: 'case_file_number', name: 'case_file_number' },
 { data: 'registration_date', name: 'registration_date' },
 { data: 'case_type_name', name: 'case_type.name' },
-{ data: 'case_description', name: 'case_description' },
 { data: 'user_surname', name: 'user.surname' },
 { data: 'user.email', name: 'user.email' },
 { data: 'user.surname', name: 'user.surname' },
@@ -154,14 +126,6 @@
 { data: 'opponent', name: 'opponent' },
 { data: 'lawyer_surname', name: 'lawyer.surname' },
 { data: 'lawyer.name', name: 'lawyer.name' },
-{ data: 'comments', name: 'comments' },
-{ data: 'charging_expenses', name: 'charging_expenses' },
-{ data: 'hours', name: 'hours' },
-{ data: 'hourly_rate', name: 'hourly_rate' },
-{ data: 'one_time_fees_name', name: 'one_time_fees.name' },
-{ data: 'one_time_fees.value', name: 'one_time_fees.value' },
-{ data: 'custom_one_time_fee_name', name: 'custom_one_time_fee_name' },
-{ data: 'custom_one_time_fee_value', name: 'custom_one_time_fee_value' },
 { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],
     orderCellsTop: true,
