@@ -524,6 +524,14 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 129,
+                'title' => 'foldernumber_show',
+            ],
+            [
+                'id'    => 130,
+                'title' => 'foldernumber_access',
+            ],
+            [
+                'id'    => 131,
                 'title' => 'profile_password_edit',
             ],
         ];

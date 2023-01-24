@@ -405,7 +405,7 @@ return [
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
-            'name'              => 'Name',
+            'name'              => 'Όνομα',
             'name_helper'       => ' ',
             'created_at'        => 'Created at',
             'created_at_helper' => ' ',
@@ -469,7 +469,7 @@ return [
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
-            'name'              => 'Name',
+            'name'              => 'Όνομα',
             'name_helper'       => ' ',
             'created_at'        => 'Created at',
             'created_at_helper' => ' ',
@@ -588,5 +588,29 @@ return [
     'customersControl' => [
         'title'          => 'Διαχείριση Πελατών',
         'title_singular' => 'Διαχείριση Πελατών',
+    ],
+    'foldernumber' => [
+        'title'          => 'Άριθμοί Φακέλων',
+        'title_singular' => 'Άριθμοί Φακέλων',
+        'fields'         => [
+            'id'                     => 'ID',
+            'id_helper'              => ' ',
+            'number'                 => 'Αρ.  Φακέλου',
+            'number_helper'          => ' ',
+            'casefile'               => 'Δικογραφία',
+            'casefile_helper'        => ' ',
+            'contract'               => 'Συμβάσεις',
+            'contract_helper'        => ' ',
+            'created_at'             => 'Created at',
+            'created_at_helper'      => ' ',
+            'updated_at'             => 'Updated at',
+            'updated_at_helper'      => ' ',
+            'deleted_at'             => 'Deleted at',
+            'deleted_at_helper'      => ' ',
+            'companycontract'        => 'Εταιρικά',
+            'companycontract_helper' => ' ',
+            'other_cases'            => 'Άλλες υποθέσεις',
+            'other_cases_helper'     => ' ',
+        ],
     ],
 ];

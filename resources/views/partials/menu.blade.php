@@ -323,6 +323,17 @@
                     </a>
                 </li>
             @endcan
+            @can('foldernumber_access')
+                <li class="{{ request()->is("admin/foldernumbers") || request()->is("admin/foldernumbers/*") ? "active" : "" }}">
+                    <a href="{{ route("admin.foldernumbers.index") }}">
+                        <i class="fa-fw fas fa-list-ol">
+
+                        </i>
+                        <span>{{ trans('cruds.foldernumber.title') }}</span>
+
+                    </a>
+                </li>
+            @endcan
             @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                 @can('profile_password_edit')
                     <li class="{{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}">
